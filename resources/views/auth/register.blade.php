@@ -4,9 +4,15 @@
 
         <!-- Name -->
         <div>
-            <x-input-label for="name" :value="__('Имя')" />
+            <x-input-label for="name" :value="__('Название организации')" />
             <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
             <x-input-error :messages="$errors->get('name')" class="mt-2" />
+        </div>
+        <!-- INN -->
+        <div class="mt-4">
+            <x-input-label for="inn" :value="__('ИНН организации')" />
+            <x-text-input id="inn" class="block mt-1 w-full" type="text" name="inn" :value="old('inn')" required pattern="\d{10}" title="ИНН должен содержать ровно 10 цифр" />
+            <x-input-error :messages="$errors->get('inn')" class="mt-2" />
         </div>
 
         <!-- Email Address -->

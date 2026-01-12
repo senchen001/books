@@ -11,4 +11,11 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    base: '/',
+    server: {
+        https: true,
+    },
+    build: {
+        base: '/',
+    },
 });

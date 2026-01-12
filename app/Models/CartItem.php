@@ -10,7 +10,8 @@ class CartItem extends Model
         'user_id',
         'product_id',
         'quantity',
-        'year'
+        'year',
+        'price'
     ];
 
     public function book()
